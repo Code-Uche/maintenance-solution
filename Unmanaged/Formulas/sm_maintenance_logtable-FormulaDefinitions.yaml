@@ -1,0 +1,6 @@
+sm_completion: =If(IsBlank(sm_datecompleted),false,true)
+sm_issueage: |-
+    =//This calculates the time difference between when the log wad created and the present time
+    
+    DateDiff(sm_creationdate, Now(),TimeUnit.Days)
+sm_reportingdays: =DateDiff(sm_problemdetected, Now(),TimeUnit.Days)
